@@ -7,6 +7,15 @@
 </head>
 <body>
 <div class="container mx-auto p-4 pt-6 md:p-6 lg:p-12 flex justify-center items-center h-screen bg-gray-100">
+    @if ($errors->any())
+        <div class="alert alert-danger">
+            <ul>
+                @foreach ($errors->all() as $error)
+                    <li>{{ $error }}</li>
+                @endforeach
+            </ul>
+        </div>
+    @endif
     <div class="w-full max-w-md bg-white p-6 rounded-lg shadow-lg">
         <form>
             <h1 class="text-3xl font-bold mb-4 text-center">Login</h1>

@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Auth\Login;
+use App\Http\Controllers\Auth\Register;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,5 +19,13 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::view('login', 'Auth.login');
-Route::view('register', 'Auth.register');
+Route::view('login', 'Auth.login')->name('login');
+Route::post('login', [Login::class, 'login']);
+
+Route::view('register', 'Auth.register')->name('register');
+Route::post('register', [Register::class, 'register']);
+
+Route::middleware('auth')->group(function () {
+    Route::view('admin.dashboard', 'Admin.Dashboard')->name('admin.dashboard');
+});
+
