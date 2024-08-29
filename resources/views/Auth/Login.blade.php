@@ -17,7 +17,8 @@
         </div>
     @endif
     <div class="w-full max-w-md bg-white p-6 rounded-lg shadow-lg">
-        <form>
+        <form action="{{route('login')}}" method="post">
+            @csrf
             <h1 class="text-3xl font-bold mb-4 text-center">Login</h1>
             <div class="md:flex md:items-center mb-6">
                 <div class="md:w-1/3">
@@ -32,6 +33,7 @@
                     <input
                         class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500"
                         id="email"
+                        name="email"
                         type="email"
                         placeholder="youremail@example.com"
                     />
@@ -50,6 +52,7 @@
                     <input
                         class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500"
                         id="password"
+                        name="password"
                         type="password"
                         placeholder="******************"
                     />

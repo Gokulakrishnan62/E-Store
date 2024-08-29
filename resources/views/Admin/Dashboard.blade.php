@@ -1,3 +1,4 @@
 <h5>
-    hiii {{auth()->user()->name}}
+    hii {{auth()->user()->name}}
 </h5>
+<a href="{{route('logout')}}">Logout</a>
