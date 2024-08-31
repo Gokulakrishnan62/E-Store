@@ -19,7 +19,7 @@ class Login extends Controller
         $validated = $request->validated();
         if (Auth::attempt($validated)) {
             $request->session()->regenerate();
-            return redirect()->route('admin.dashboard');
+            return redirect()->intended('admin/dashboard');
         } else {
             return back()->withErrors([
                 'email' => 'The provided credentials do not match our records.',

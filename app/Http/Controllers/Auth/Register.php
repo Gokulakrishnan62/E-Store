@@ -22,7 +22,7 @@ class Register extends Controller
 
             Auth::login($user);
 
-            return redirect()->route('admin.dashboard');
+            return redirect()->intended('admin/dashboard');
         } catch (QueryException $e) {
             if ($e->errorInfo[1] == 1062) { // Duplicate entry error code
                 return redirect()->back()->withErrors(['email' => 'The email address is already registered.'])->withInput();

@@ -27,7 +27,11 @@ Route::view('register', 'Auth.Register')->name('register');
 Route::post('register', [Register::class, 'register']);
 
 Route::middleware('auth')->group(function () {
-    Route::view('admin.dashboard', 'Admin.Dashboard')->name('admin.dashboard');
+
+    Route::prefix('admin')->group(function () {
+        Route::view('dashboard', 'Admin.Dashboard');
+    });
+
     Route::get('logout', [Logout::class, 'logout'])->name('logout');
 });
 
