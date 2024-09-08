@@ -35,6 +35,21 @@
             <li>
                 <button class="w-full text-left px-4 py-2 hover:bg-pink-500 hover:rounded-md focus:outline-none flex items-center justify-between" data-toggle="submenu">
                     <span class="flex gap-3">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#ffffff"><path d="m260-520 220-360 220 360H260ZM700-80q-75 0-127.5-52.5T520-260q0-75 52.5-127.5T700-440q75 0 127.5 52.5T880-260q0 75-52.5 127.5T700-80Zm-580-20v-320h320v320H120Zm580-60q42 0 71-29t29-71q0-42-29-71t-71-29q-42 0-71 29t-29 71q0 42 29 71t71 29Zm-500-20h160v-160H200v160Zm202-420h156l-78-126-78 126Zm78 0ZM360-340Zm340 80Z"/></svg>
+                        Categories
+                    </span>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 transform transition-transform duration-200" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd" d="M5.293 9.707a1 1 0 010-1.414L9.293 4.293a1 1 0 011.414 0l4 4a1 1 0 01-1.414 1.414L10 6.414l-3.293 3.293a1 1 0 01-1.414 0z" clip-rule="evenodd" />
+                    </svg>
+                </button>
+                <ul class="hidden pl-8 py-2">
+                    <li><a href="{{ url('admin/list-categories') }}" class="block px-4 py-2 hover:bg-pink-500 hover:rounded-md">All Categories</a></li>
+                    <li><a href="{{ url('admin/create-category') }}" class="block px-4 py-2 hover:bg-pink-500 hover:rounded-md">Create new</a></li>
+                </ul>
+            </li>
+            <li>
+                <button class="w-full text-left px-4 py-2 hover:bg-pink-500 hover:rounded-md focus:outline-none flex items-center justify-between" data-toggle="submenu">
+                    <span class="flex gap-3">
                         <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#ffffff"><path d="M360-440h400L622-620l-92 120-62-80-108 140ZM120-120q-33 0-56.5-23.5T40-200v-520h80v520h680v80H120Zm160-160q-33 0-56.5-23.5T200-360v-440q0-33 23.5-56.5T280-880h200l80 80h280q33 0 56.5 23.5T920-720v360q0 33-23.5 56.5T840-280H280Zm0-80h560v-360H527l-80-80H280v440Zm0 0v-440 440Z"/></svg>
                         Media
                     </span>
